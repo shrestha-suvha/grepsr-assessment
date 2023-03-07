@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import Container from '@mui/system/Container';
 
-import './index.css';
+import './sass/style.scss';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
