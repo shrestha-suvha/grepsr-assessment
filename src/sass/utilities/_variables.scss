@@ -1,3 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope&display=swap');
+
+$Manrope: Manrope, sans-serif;
+$font-family-base: $Manrope !default;
+
 $primary: #1276ff !default;
 $primary-light: #eaf3ff !default;
 
@@ -5,4 +10,11 @@ $text-color: #1b2f50 !default;
 $text-color-light-1: #5e6c84 !default;
 $text-color-light-2: #8d9cb5 !default;
 
-$text-mute: #a2b2c7 !default;
+$text-muted: #a2b2c7 !default;
+
+// font-weight
+$font-weight-lighter: lighter !default;
+$font-weight-light: 400 !default;
+$font-weight-normal: 500 !default;
+$font-weight-bold: 600 !default;
+$font-weight-bolder: 900 !default;

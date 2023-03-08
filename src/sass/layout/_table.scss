@@ -1,0 +1,36 @@
+.table-header {
+  color: $text-color-light-2;
+  height: 18px;
+  font-weight: bold;
+}
+
+.fill-rate {
+  color: $text-color-light-1;
+  height: 17px;
+  letter-spacing: 0.17px;
+}
+
+.nav-pills .nav-link {
+  background-color: white !important;
+  color: $text-color !important;
+}
+
+.nav-pills .nav-link.active {
+  border-bottom: 3px solid $primary !important;
+  border-radius: 0px !important;
+  background-color: white !important;
+  color: $text-color !important;
+}
+
+.location-data {
+  line-height: 24px;
+  font-weight: bold;
+  letter-spacing: 0.29px;
+  color: $text-color;
+  background-color: #f3f4f8;
+  height: 59px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding-left: 24.9px;
+}

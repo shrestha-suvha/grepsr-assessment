@@ -4,11 +4,12 @@ import Table from 'react-bootstrap/Table';
 import { FaHashtag } from 'react-icons/fa';
 import { AiOutlineInfoCircle } from 'react-icons/ai';
 import { BiFontColor } from 'react-icons/bi';
+import ProgressBar from 'react-bootstrap/ProgressBar';
 
 const tableData = [
-  { id: 0, name: 'Available' },
-  { id: 1, name: 'Ready' },
-  { id: 2, name: 'Started' },
+  { name: 0, description: 'Available' },
+  { name: 1, description: 'Ready' },
+  { name: 2, description: 'Started' },
 ];
 
 const DataList: FC = () => {
@@ -20,17 +21,17 @@ const DataList: FC = () => {
             <thead>
               <tr>
                 <th>
-                  <FaHashtag style={{ color: 'red', marginRight: '4px', fontSize: 16 }} />
-                  geo_id
+                  <FaHashtag style={{ color: 'gray', marginRight: '4px', fontSize: 16 }} />
+                  geo_name
                   <AiOutlineInfoCircle style={{ marginLeft: '4px' }} />
                 </th>
                 <th>
-                  <BiFontColor style={{ marginLeft: '4px', color: 'red', fontSize: 16 }} />
+                  <BiFontColor style={{ marginLeft: '4px', color: 'gray', fontSize: 16 }} />
                   location
                   <AiOutlineInfoCircle style={{ marginLeft: '4px' }} />
                 </th>
                 <th>
-                  <FaHashtag style={{ color: 'red', marginRight: '4px', fontSize: 16 }} />
+                  <FaHashtag style={{ color: 'gray', marginRight: '4px', fontSize: 16 }} />
                   contact_no
                   <AiOutlineInfoCircle style={{ marginLeft: '4px' }} />
                 </th>
@@ -38,8 +39,8 @@ const DataList: FC = () => {
             </thead>
             <tbody className="ft-table">
               {tableData?.map(item => (
-                <tr key={item?.id}>
-                  <td>{item?.id}</td>
+                <tr key={item?.name}>
+                  <td>{item?.name}</td>
                   <td>{item?.name}</td>
                   <td>{item?.name}</td>
                 </tr>
@@ -51,17 +52,31 @@ const DataList: FC = () => {
           <Table responsive style={{ maxHeight: '10px' }}>
             <thead>
               <tr>
-                <th color={'#D2DAE5'}>column name</th>
-                <th>Description</th>
+                <th className="table-header">Column name</th>
+                <th className="table-header">Description</th>
                 <th></th>
               </tr>
             </thead>
             <tbody className="ft-table">
               {tableData?.map(item => (
-                <tr key={item?.id}>
-                  <td>{item?.id}</td>
-                  <td>{item?.name}</td>
-                  <td>{item?.name}</td>
+                <tr key={item?.name}>
+                  <td>
+                    <Row>
+                      <Col>
+                        <span className="">{item?.name}</span>
+                        <p className="text-muted"># Integer</p>
+                      </Col>
+                    </Row>
+                  </td>
+                  <td>
+                    <Row>
+                      <Col>
+                        <div style={{ color: '#1B2F50' }}>{item?.description}</div>
+                        <span className="fill-rate">Fillrate :80%</span>
+                        <ProgressBar now={80} visuallyHidden style={{ height: '2px', marginTop: '4px' }} />
+                      </Col>
+                    </Row>
+                  </td>
                 </tr>
               ))}
             </tbody>
