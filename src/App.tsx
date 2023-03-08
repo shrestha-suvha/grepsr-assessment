@@ -5,8 +5,6 @@ import { ChevronLeft } from 'react-bootstrap-icons';
 
 import DataList from './components/DataList';
 
-import './App.scss';
-
 function App() {
   return (
     <Container fluid className="px-0">
