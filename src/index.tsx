@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import Container from '@mui/system/Container';
 
 import './sass/style.scss';
 import App from './App';
@@ -9,9 +8,7 @@ import reportWebVitals from './reportWebVitals';
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 root.render(
   <React.StrictMode>
-    <Container maxWidth={false} disableGutters>
-      <App />
-    </Container>
+    <App />
   </React.StrictMode>,
 );
 
