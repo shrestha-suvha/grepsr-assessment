@@ -5,6 +5,7 @@ import { BiChevronLeft } from 'react-icons/bi';
 import { CgCompressRight } from 'react-icons/cg';
 import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
+import Form from 'react-bootstrap/Form';
 
 import DataList from './components/DataList';
 
@@ -19,6 +20,7 @@ function App() {
           >
             <BiChevronLeft size="1em" color="#1276ff" />
           </div>
+
           <small className="fw-bold text-color fs-4 ">Sample data 1</small>
         </Col>
         <Col>
@@ -49,28 +51,70 @@ function App() {
           </Row>
           <Row>
             <Col>
-              <div className="location-data">US Starbucks locations</div>
+              <div className="heading">US Starbucks locations</div>
             </Col>
           </Row>
-          <Row className="d-flex">
-            <Col>1</Col>
-            <Col className=" d-flex justify-content-around">
+          <Row className=" mt-2">
+            <Col className="d-flex flex-row ">
+              <Col md={3}> Sample Data</Col>
+              <Col className="p-0">
+                <Form.Select size={'sm'} className="w-75 ml-4">
+                  <option>Dropdown main</option>
+                </Form.Select>
+              </Col>
+            </Col>
+            <Col className=" d-flex justify-content-end ">
               <Row>
                 <Col className="align-item-center ">
-                  <span style={{ backgroundColor: '#F3F4F8', width: '32px', height: '32px' }}>
+                  <div
+                    style={{ backgroundColor: '#F3F4F8', height: '32px', width: '32px' }}
+                    className="rounded-2 d-inline-flex  justify-content-center  align-items-center "
+                  >
                     <FiSearch color="gray" />
-                  </span>
-                </Col>
-                <Col>
-                  <span>
-                    <CgCompressRight size={18} />
-                  </span>
+                  </div>
+                  <div
+                    style={{ backgroundColor: '#F3F4F8', height: '32px', width: '32px', marginLeft: '8px' }}
+                    className="rounded-2 d-inline-flex  justify-content-center  align-items-center "
+                  >
+                    <CgCompressRight size={18} color="gray" />
+                  </div>
                 </Col>
               </Row>
             </Col>
           </Row>
-          <Row>
-            <Col></Col>
+          <Row className="mt-2 justify-content-center">
+            <Col className="d-flex flex-row ">
+              <Col className="input-group input-group-sm p-2  d-block">
+                <span className="input-group-text bg-transparent">
+                  <input className="form-check-input " type="checkbox" value="table" name="checkbox" />
+                  <label
+                    className="form-check-label"
+                    style={{ marginLeft: '8px', paddingRight: '4px' }}
+                    htmlFor="flexRadioDefault1"
+                  >
+                    Table
+                  </label>
+                </span>
+              </Col>
+
+              <Col className="input-group input-group-sm p-2  d-block">
+                <span className="input-group-text bg-transparent">
+                  <input className="form-check-input " type="checkbox" value="schema" name="checkbox" checked />
+                  <label className="form-check-label" style={{ marginLeft: '8px' }} htmlFor="flexRadioDefault1">
+                    Schema
+                  </label>
+                </span>
+              </Col>
+              <Col className="input-group input-group-sm p-2  d-block ">
+                <span className="input-group-text bg-transparent">
+                  <input className="form-check-input" type="checkbox" value="option3" name="checkbox" />
+                  <label className="form-check-label" style={{ marginLeft: '8px' }} htmlFor="flexRadioDefault1">
+                    Option 3
+                  </label>
+                </span>
+              </Col>
+            </Col>
+            <Col className="d-flex justify-content-end records mt-3">180k records | 35 columns</Col>
           </Row>
 
           <DataList />

@@ -22,7 +22,7 @@
   color: $text-color !important;
 }
 
-.location-data {
+.heading {
   line-height: 24px;
   font-weight: bold;
   letter-spacing: 0.29px;
@@ -33,4 +33,16 @@
   justify-content: start;
   align-items: center;
   padding-left: 24.9px;
+}
+
+.records {
+  height: 19px;
+  font-weight: medium;
+  letter-spacing: 0.2px;
+  font-size: 14px;
+  color: $text-color-light-1;
+}
+
+.form-check-input[type='checkbox'] {
+  border-radius: 1em !important;
 }
