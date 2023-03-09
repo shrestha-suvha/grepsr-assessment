@@ -1,5 +1,9 @@
-.top__nav {
-  // display: flex;
-  // align-items: center;
+.top-nav {
   min-height: 72px;
+  &__title {
+    letter-spacing: 0.38px;
+  }
+  &__search {
+    letter-spacing: 0.2px;
+  }
 }

@@ -3,34 +3,35 @@ import { Container, Row, Col } from 'react-bootstrap';
 import { FiSearch } from 'react-icons/fi';
 import { BiChevronLeft } from 'react-icons/bi';
 import { CgCompressRight } from 'react-icons/cg';
+import { BsThreeDotsVertical } from 'react-icons/bs';
 import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
 import Form from 'react-bootstrap/Form';
+import { AiFillHome } from 'react-icons/ai';
 
 import DataList from './components/DataList';
 
 function App() {
   return (
-    <Container fluid className="p-0">
-      <Row className="top__nav p-2 d-flex justify-content-center align-items-center">
-        <Col>
+    <Container fluid>
+      <Row className="top-nav ps-4 pe-5 d-flex justify-content-start align-items-center border-bottom">
+        <Col className="ps-0 ">
           <div
             style={{ backgroundColor: '#eaf3ff', height: '24px', width: '24px' }}
             className="rounded-2 d-inline-flex  justify-content-center  align-items-center "
           >
             <BiChevronLeft size="1em" color="#1276ff" />
           </div>
-
-          <small className="fw-bold text-color fs-4 ">Sample data 1</small>
+          <span className="top-nav__title fw-bold fs-4 line-height-lg ps-2">Sample data 1</span>
         </Col>
-        <Col>
-          <div className="input-group mr-5 input-group-sm">
+        <Col className="">
+          <div className="input-group  input-group-sm">
             <span className="input-group-text bg-transparent">
               <FiSearch size="1.5em" color="gray" />
             </span>
             <input
               type="text"
-              className="form-control border-start-0"
+              className="form-control border-start-0 top-nav__search"
               placeholder="Search datasets"
               aria-label="Search datasets"
             />
@@ -38,7 +39,20 @@ function App() {
         </Col>
       </Row>
       <Row>
-        <Col md={3}>Left pannel</Col>
+        <Col className={'col-sm-2 pe-0 m-2'}>
+          <div className="d-flex  justify-content-between border rounded-2 px-1 py-1 border-info bg-info-light">
+            <div className="ms-2">
+              <AiFillHome size="1.1em" color="#1276ff" className="d-inline" />
+              {/* <div className="fs-esm d-inline ps-2"> */}
+              <span className="fw-bold text-info fs-esm ps-2">Sample data 1</span>
+              <div className="fs-esm ps-4">105 K records</div>
+              {/* </div> */}
+            </div>
+            <div className="pt-2">
+              <BsThreeDotsVertical size={'1.625em'} color="gray" />
+            </div>
+          </div>
+        </Col>
 
         <Col>
           <Row>
