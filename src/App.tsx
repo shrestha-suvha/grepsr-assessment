@@ -1,13 +1,13 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import { FiSearch } from 'react-icons/fi';
-import { BiChevronLeft } from 'react-icons/bi';
+import { BiChevronLeft, BiChevronRight } from 'react-icons/bi';
 import { CgCompressRight } from 'react-icons/cg';
 import { BsThreeDotsVertical } from 'react-icons/bs';
 import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
 import Form from 'react-bootstrap/Form';
-import { AiFillHome } from 'react-icons/ai';
+import { AiFillHome, AiOutlinePlus } from 'react-icons/ai';
 
 import DataList from './components/DataList';
 
@@ -40,21 +40,32 @@ function App() {
       </Row>
       <Row>
         <Col className={'col-sm-2 pe-0 m-2'}>
-          <div className="d-flex  justify-content-between border rounded-2 px-1 py-1 border-info bg-info-light">
-            <div className="ms-2">
-              <AiFillHome size="1.1em" color="#1276ff" className="d-inline" />
-              {/* <div className="fs-esm d-inline ps-2"> */}
-              <span className="fw-bold text-info fs-esm ps-2">Sample data 1</span>
-              <div className="fs-esm ps-4">105 K records</div>
-              {/* </div> */}
+          <div className="side_nav">
+            <div className="d-flex  justify-content-between  px-1 py-1 side_nav__item--active">
+              <div className="ms-2">
+                <AiFillHome size="1.1em" color="#1276ff" className="d-inline" />
+                {/* <div className="fs-esm d-inline ps-2"> */}
+                <span className="fw-bold text-info fs-esm ps-2">Sample data 1</span>
+                <div className="fs-esm ps-4">105 K records</div>
+                {/* </div> */}
+              </div>
+              <div className="pt-2 me-2">
+                <BsThreeDotsVertical color="gray" className="side_nav__icon--active " />
+              </div>
             </div>
-            <div className="pt-2">
-              <BsThreeDotsVertical size={'1.625em'} color="gray" />
+            <div className="d-flex  justify-content-between  border-bottom">
+              <div>
+                <BiChevronRight size={'1em'} className={'side_nav__icon--expand'} />
+                <span className="side_nav__item-title ps-1">Sample data</span>
+              </div>
+              <div>
+                <AiOutlinePlus className="side_nav__icon--add" />
+              </div>
             </div>
           </div>
         </Col>
 
-        <Col>
+        <Col className="border-start">
           <Row>
             <Col>
               <Tabs variant="pills" defaultActiveKey="tableOne" transition={false} id="data-table-detail">
