@@ -55,9 +55,8 @@ const DataList: FC = () => {
             </Table>
           </div>
         </Col>
-
         <Col>
-          <div className="table-wrapper border rounded-1">
+          <div className="table-wrapper border rounded-1 ">
             <Table className="fs-esm ">
               <thead>
                 <tr>
@@ -80,9 +79,8 @@ const DataList: FC = () => {
                       <Row>
                         <Col>
                           <div style={{ color: '#1B2F50' }}>{item?.description}</div>
-                          <span className="fill-rate">Fillrate :10%</span>
-
-                          <ProgressBar now={70} visuallyHidden className="bg-transparent" />
+                          <span className="fill-rate ">Fillrate :10%</span>
+                          <ProgressBar now={30} max={100} className="mt-2" />
                         </Col>
                       </Row>
                     </td>

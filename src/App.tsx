@@ -15,8 +15,8 @@ import DataList from './components/DataList';
 
 function App() {
   return (
-    <Container fluid className="">
-      <Row className="top-nav ps-4 pe-5 d-flex justify-content-start align-items-center border-bottom">
+    <Container fluid>
+      <Row className="top-nav ps-4 pe-4 d-flex justify-content-start align-items-center border-bottom">
         <Col className="ps-0 ">
           <div className="rounded-2 d-inline-flex  justify-content-center  align-items-center top-nav__back-arrow">
             <BiChevronLeft size="1em" color="#1276ff" />
@@ -38,7 +38,7 @@ function App() {
         </Col>
       </Row>
       <Row>
-        <Col className={'col-sm-2 pe-0 m-2'}>
+        <Col className="col-sm-2 pe-0 m-2">
           <div className="side_nav">
             <div className="d-flex  justify-content-between  px-1 py-1 side_nav__item--active">
               <div className="ms-2">
@@ -64,10 +64,25 @@ function App() {
               </div>
               <div className="pt-2">No sample data</div>
             </div>
+            <div className="d-flex  justify-content-between align-items-center border-bottom pb-2 mt-4">
+              <span>
+                <BiChevronRight size={'1em'} className="side_nav__icon--expand" />
+                <span className="side_nav__item-title ps-1 ">Dataset 2 </span>
+              </span>
+              <AiOutlinePlus className="side_nav__icon--add" />
+            </div>
+            <div className="d-flex  justify-content-between align-items-center border-bottom pb-2 mt-4">
+              <span>
+                <BiChevronRight size={'1em'} className="side_nav__icon--expand" />
+
+                <span className="side_nav__item-title ps-1 ">Dataset 2 </span>
+              </span>
+              <AiOutlinePlus className="side_nav__icon--add" />
+            </div>
           </div>
         </Col>
 
-        <Col className="border-start ">
+        <Col className="border-start">
           <Row>
             <Col>
               <Tabs variant="pills" defaultActiveKey="tableOne" transition={false} id="data-table-detail">
@@ -139,9 +154,9 @@ function App() {
                 </span>
               </Col>
             </Col>
-            <Col className="d-flex justify-content-end records mt-3">180k records | 35 columns</Col>
+            <Col className="d-flex justify-content-end records mt-3 me-4">180k records | 35 columns</Col>
           </Row>
-
+          <Row></Row>
           <DataList />
         </Col>
       </Row>

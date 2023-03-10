@@ -46,10 +46,8 @@
 .form-check-input[type='checkbox'] {
   border-radius: 1em !important;
 }
-
-.progress-bar {
-  height: 2px;
-  margin-top: 4px;
+.progress {
+  height: 2px !important;
 }
 
 .table__icon--hash {
@@ -64,7 +62,7 @@
 
 .table-wrapper {
   overflow: auto;
-  max-height: 200px;
+  max-height: calc(100vh - 300px);
   overflow-x: hidden;
 }
 
