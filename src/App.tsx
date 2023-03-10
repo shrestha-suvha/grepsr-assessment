@@ -8,6 +8,7 @@ import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
 import Form from 'react-bootstrap/Form';
 import { AiFillHome, AiOutlinePlus } from 'react-icons/ai';
+import { HiDatabase } from 'react-icons/hi';
 
 import DataList from './components/DataList';
 
@@ -46,21 +47,26 @@ function App() {
                 <AiFillHome size="1.1em" color="#1276ff" className="d-inline" />
                 {/* <div className="fs-esm d-inline ps-2"> */}
                 <span className="fw-bold text-info fs-esm ps-2">Sample data 1</span>
-                <div className="fs-esm ps-4">105 K records</div>
+                <div className="fs-esm ps-4 mt-1 text-muted">105 K records</div>
                 {/* </div> */}
               </div>
               <div className="pt-2 me-2">
                 <BsThreeDotsVertical color="gray" className="side_nav__icon--active " />
               </div>
             </div>
-            <div className="d-flex  justify-content-between  border-bottom">
-              <div>
+            <div className="d-flex  justify-content-between align-items-center border-bottom pt-3 pb-2">
+              <span>
                 <BiChevronRight size={'1em'} className={'side_nav__icon--expand'} />
                 <span className="side_nav__item-title ps-1">Sample data</span>
-              </div>
+              </span>
+
+              <AiOutlinePlus className="side_nav__icon--add" />
+            </div>
+            <div className="side_nav__item--empty d-flex flex-column justify-content-center align-items-center">
               <div>
-                <AiOutlinePlus className="side_nav__icon--add" />
+                <HiDatabase className="side_nav__icon--empty" />{' '}
               </div>
+              <div className="pt-2">No sample data</div>
             </div>
           </div>
         </Col>
@@ -69,14 +75,22 @@ function App() {
           <Row>
             <Col>
               <Tabs variant="pills" defaultActiveKey="tableOne" transition={false} id="data-table-detail">
-                <Tab eventKey="tableOne" title="Data table 1"></Tab>
-                <Tab eventKey="tableTwo" title="Data table 2"></Tab>
+                <Tab
+                  eventKey="tableOne"
+                  title="Data table 1"
+                  tabClassName="fs-sm rounded-0 bg-white border-bottom-3"
+                ></Tab>
+                <Tab
+                  eventKey="tableTwo"
+                  title="Data table 2"
+                  tabClassName="fs-sm rounded-0 bg-white border-bottom-3"
+                ></Tab>
               </Tabs>
             </Col>
           </Row>
           <Row>
             <Col>
-              <div className="heading">US Starbucks locations</div>
+              <div className="heading ">US Starbucks locations</div>
             </Col>
           </Row>
           <Row className=" mt-2">

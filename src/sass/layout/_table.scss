@@ -11,15 +11,15 @@
 }
 
 .nav-pills .nav-link {
-  background-color: white !important;
   color: $text-color !important;
+  letter-spacing: 0.22px !important;
+  margin-left: 20px !important;
 }
 
 .nav-pills .nav-link.active {
   border-bottom: 3px solid $primary !important;
-  border-radius: 0px !important;
-  background-color: white !important;
-  color: $text-color !important;
+  letter-spacing: 0.22px !important;
+  margin-left: 20px !important;
 }
 
 .heading {

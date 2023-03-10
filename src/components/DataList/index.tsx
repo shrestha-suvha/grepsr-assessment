@@ -22,27 +22,27 @@ const DataList: FC = () => {
               <tr>
                 <th>
                   <FaHashtag style={{ color: 'gray', marginRight: '4px', fontSize: 16 }} />
-                  geo_name
+                  <span className="fs-md fw-bold">geo_name</span>
                   <AiOutlineInfoCircle style={{ marginLeft: '4px' }} />
                 </th>
                 <th>
                   <BiFontColor style={{ marginLeft: '4px', color: 'gray', fontSize: 16 }} />
-                  location
+                  <span className="fs-md fw-bold">location</span>
                   <AiOutlineInfoCircle style={{ marginLeft: '4px' }} />
                 </th>
                 <th>
                   <FaHashtag style={{ color: 'gray', marginRight: '4px', fontSize: 16 }} />
-                  contact_no
+                  <span className="fs-md fw-bold">contact_no</span>
                   <AiOutlineInfoCircle style={{ marginLeft: '4px' }} />
                 </th>
               </tr>
             </thead>
-            <tbody className="ft-table">
+            <tbody className="ft-table fs-md">
               {tableData?.map(item => (
                 <tr key={item?.name}>
-                  <td>{item?.name}</td>
-                  <td>{item?.name}</td>
-                  <td>{item?.name}</td>
+                  <td className="fs-sm">{item?.name}</td>
+                  <td className="fs-sm">{item?.name}</td>
+                  <td className="fs-sm">{item?.name}</td>
                 </tr>
               ))}
             </tbody>

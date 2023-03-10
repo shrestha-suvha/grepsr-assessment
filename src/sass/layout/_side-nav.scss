@@ -7,10 +7,14 @@
       border-radius: 8px;
       opacity: 1;
     }
+    &--empty {
+      height: 200px;
+      color: $text-color-light-1;
+    }
   }
   &__item-title {
     text-align: left;
-    font: normal normal bold 14px/67px $font-family-base;
+    font: normal normal bold $font-size-sm $font-family-base;
     letter-spacing: 0.22px;
     opacity: 1;
   }
@@ -30,6 +34,15 @@
       opacity: 1;
       color: $info;
       padding: 4px;
+    }
+    &--empty {
+      width: 40px;
+      height: 40px;
+      background: $info-light 0% 0% no-repeat padding-box;
+      color: $info;
+      border-radius: 50%;
+      opacity: 1;
+      padding: 6px;
     }
     &--expand {
       color: $info;
