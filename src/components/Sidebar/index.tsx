@@ -53,6 +53,7 @@ const Sidebar: FC = () => {
             )}
             <span className="side_nav__item-title ps-1 ">Dataset 3</span>
           </span>
+          <AiOutlinePlus className="side_nav__icon--add" />
         </div>
         <Collapse in={open}>
           <div className="example-collapse-text">

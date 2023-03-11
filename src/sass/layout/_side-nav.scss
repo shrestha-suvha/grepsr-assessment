@@ -7,6 +7,11 @@
       border-radius: 8px;
       opacity: 1;
     }
+    &--inactive {
+      margin: 8px !important;
+      border: 1px solid $search-icon-bg;
+      border-radius: 6px;
+    }
     &--empty {
       height: 200px;
       color: $text-color-light-1;
@@ -26,6 +31,7 @@
       border-radius: 50%;
       padding: 3px;
     }
+
     &--add {
       width: 24px;
       height: 24px;
