@@ -7,7 +7,7 @@ import { IDataTableDetailProps } from './types';
 const DataTableDetail: FC<IDataTableDetailProps> = ({ dataSetColumnDetailList }) => {
   return (
     <>
-      <div className="table-wrapper border rounded-1 ">
+      <div className="table-wrapper border rounded-1 " data-testid="dataTableDetail-1">
         <Table className="fs-esm ">
           <thead className="bg-white">
             <tr>

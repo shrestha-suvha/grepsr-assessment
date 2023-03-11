@@ -12,7 +12,7 @@ const Sidebar: FC = () => {
   const [addData, setAddData] = useState(false);
   return (
     <>
-      <div className="side_nav">
+      <div className="side_nav " data-testid="Sidebar-1">
         <div className="d-flex justify-content-between p-1 side_nav__item--active">
           <div className="ms-2">
             <AiFillHome size="1.1em" color="#1276ff" className="d-inline" />

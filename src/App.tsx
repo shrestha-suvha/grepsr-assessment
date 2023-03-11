@@ -8,7 +8,7 @@ import Sidebar from './components/Sidebar';
 function App() {
   return (
     <Container fluid>
-      <Navbar />
+      <Navbar title={'Sample data 1'} />
       <Row>
         <Col className="col-sm-2 pe-0 m-2">
           <Sidebar />
