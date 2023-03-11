@@ -1,0 +1,57 @@
+.side_nav {
+  &__item {
+    &--active {
+      height: 54px;
+      background: $info-light 0% 0% no-repeat padding-box;
+      border: 1px solid $info;
+      border-radius: 8px;
+      opacity: 1;
+    }
+    &--inactive {
+      margin: 8px !important;
+      border: 1px solid $search-icon-bg;
+      border-radius: 6px;
+    }
+    &--empty {
+      height: 200px;
+      color: $text-color-light-1;
+    }
+  }
+  &__item-title {
+    text-align: left;
+    font: normal normal bold $font-size-sm $font-family-base;
+    letter-spacing: 0.22px;
+    opacity: 1;
+  }
+  &__icon {
+    &--active {
+      height: 26px;
+      width: 26px;
+      background-color: $info-light-1;
+      border-radius: 50%;
+      padding: 3px;
+    }
+
+    &--add {
+      width: 24px;
+      height: 24px;
+      background: $info-light 0% 0% no-repeat padding-box;
+      border-radius: 6px;
+      opacity: 1;
+      color: $info;
+      padding: 4px;
+    }
+    &--empty {
+      width: 40px;
+      height: 40px;
+      background: $info-light 0% 0% no-repeat padding-box;
+      color: $info;
+      border-radius: 50%;
+      opacity: 1;
+      padding: 6px;
+    }
+    &--expand {
+      color: $info;
+    }
+  }
+}

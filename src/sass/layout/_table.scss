@@ -1,0 +1,74 @@
+.table-header {
+  color: $text-color-light-2;
+  height: 18px;
+  font-weight: bold;
+}
+
+.fill-rate {
+  color: $text-color-light-1;
+  height: 17px;
+  letter-spacing: 0.17px;
+}
+
+.nav-pills .nav-link {
+  color: $text-color !important;
+  letter-spacing: 0.22px !important;
+  margin-left: 20px !important;
+}
+
+.nav-pills .nav-link.active {
+  border-bottom: 3px solid $primary !important;
+  letter-spacing: 0.22px !important;
+  margin-left: 20px !important;
+}
+
+.heading {
+  line-height: 24px;
+  font-weight: bold;
+  letter-spacing: 0.29px;
+  color: $text-color;
+  background-color: #f3f4f8;
+  height: 59px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding-left: 24.9px;
+}
+
+.records {
+  height: 19px;
+  font-weight: medium;
+  letter-spacing: 0.2px;
+  font-size: 14px;
+  color: $text-color-light-1;
+}
+
+.form-check-input[type='checkbox'] {
+  border-radius: 1em !important;
+}
+.progress {
+  height: 2px !important;
+}
+
+.table__icon--hash {
+  color: gray;
+  margin-right: 4px;
+  font-size: 16px;
+}
+
+.table__icon--info {
+  margin-left: 4px;
+}
+
+.table-wrapper {
+  overflow: auto;
+  max-height: calc(100vh - 300px);
+  overflow-x: hidden;
+}
+
+thead tr:nth-child(1) th {
+  background: white;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}

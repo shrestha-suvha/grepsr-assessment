@@ -1,0 +1,14 @@
+.top-nav {
+  min-height: 72px;
+  &__title {
+    letter-spacing: 0.38px;
+  }
+  &__search {
+    letter-spacing: 0.2px;
+  }
+  &__back-arrow {
+    height: 24px;
+    height: 24px;
+    background-color: $info-light;
+  }
+}
