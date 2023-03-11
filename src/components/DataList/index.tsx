@@ -8,27 +8,8 @@ import { IDataSetList } from './types';
 import DataTableList from './components/DataTableList';
 import DataTableDetail from './components/DataTableDetail';
 import { getDataSetList } from 'src/services/dashboard';
+import { dataSetColumnDetailList } from './constant';
 
-const dataSetColumnDetailList = [
-  {
-    columnName: 'GEO ID ',
-    description: 'string',
-    fillRate: 10,
-    id: '1',
-  },
-  {
-    columnName: 'string',
-    description: 'string',
-    fillRate: 20,
-    id: '2',
-  },
-  {
-    columnName: 'string',
-    description: 'string',
-    fillRate: 55,
-    id: '3',
-  },
-];
 const DataList: FC = () => {
   const [dataSetList, setDataSetList] = useState<IDataSetList>([]);
 
@@ -38,6 +19,7 @@ const DataList: FC = () => {
       setDataSetList(res);
     })();
   }, []);
+
   return (
     <>
       <Row>
